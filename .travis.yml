@@ -1,9 +1,7 @@
-
 language: node_js
 node_js:
-- '6.9.5'
-deploy:
- deploy:
+  - 6.9.5
+  deploy:
   provider: hackage
   username: "karthika_pj"
   password: "Sreekrishna@001"
