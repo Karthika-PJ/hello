@@ -2,14 +2,6 @@
  - 6.9.5
  deploy:
   provider: heroku
+  api_key:
     secure: ikSgUSys2hWnIzYkQ0nmoCnZNeMIvzUBagjWN27TOmD7IMgXpZGwteX9KHJGzPgpZcTUsyDkgEq4UwNjEcQdLirptcqUOPa/mIyDJSouuiVmBDX54B0EvJoIFV1spy9QczM2BObpEXr06ZH1fD4fpyxVWuZt3Ug01y7yyLqcLxxxdvPv2cw5m9L1N/O38qSx4llsjujuD2Kw48xL9VZETgwCVxRVsY0zGNtcSjlTZ3+fP2+hhpwJptQc9VmehNy+Wge1lj5hncHtIyL8pdzPSgfvvy4V0j1vIjR4OSVEV3J8fwVFRwjHZDmKCw+ny9hUt9S2vkD7iNMI/XA0pzjhTHyIZWn2hwIVTL2d7gm0y2/dBOMOdzKk/94N4eTFJFkBpX9otnoxUoBrg443h9XEY4X770ENnEYoBMaKbTtzGDS8Xz9yt7ZjOesFZ67VsAsFLZ66yF7+z35lpCsvnk39+syuJBau+6G2S1VccvsS11xK2k/gzWWsIIbr6T0iZTXUyu4TkppkZALokR4oQ+n7OCVZucrsbA/HxuQ5k+2rNFSy2G/x3eb0KUS6imVepvitwqn9hpbZBwi3nYd3TYy/cpu3oOYns5FYBH3jEP3m2oOcBWvol561wQ4N9Z9tLTcojv7PVEmJGt0WEZVcZYUtzmV4TfQOyAQ8Wp9Sv8RYkXA=
-after_success:
-  - wget -qO- https://toolbelt.heroku.com/install-ubuntu.sh | sh
-  - git remote add heroku git@heroku.com:hello1.git
-  - echo "Host heroku.com" >> ~/.ssh/config
-  - echo "   StrictHostKeyChecking no" >> ~/.ssh/config
-  - echo "   CheckHostIP no" >> ~/.ssh/config
-  - echo "   UserKnownHostsFile=/dev/null" >> ~/.ssh/config
-  - yes | heroku keys:add
-  - yes | git push heroku master
-
+ app: hello1
